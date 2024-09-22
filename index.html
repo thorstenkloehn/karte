@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karte Anzeigen</title>
+    <title>Document</title>
     <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />
 <script src="node_modules/leaflet/dist/leaflet.js"></script>
 <style>
@@ -52,7 +52,7 @@
   </style>
 </head>
 <body>
-    <a href="impressum.html">Impressum</a> - <a href="datenschutz.html">Datenschutz</a>
+    <a href="https://ahrensburg.city">Ahrensburg.city</a> | <a href="https://ahrensburg.city/Ahrensburg.city:Impressum">Impressum</a> | <a href="https://ahrensburg.city/Ahrensburg.city:Datenschutz">Datenschutz</a>
   <div id="map"></div>
   <script>
     // initialize Leaflet
@@ -70,7 +70,7 @@
                 L.geoJSON(data, {
                     onEachFeature: function (feature, layer) {
                         if (feature.properties && feature.properties.bild) {
-                          layer.bindPopup('<img src="media/' + feature.properties.bild + '" alt="Image" style="width:100%; cursor: pointer;" onclick="window.open(this.src, \'_blank\');">');
+                          layer.bindPopup('<img src="media/' + feature.properties.bild + '" alt="Bild" style="width:100%;">');
                         }
                     }
                 }).addTo(map);
