@@ -70,7 +70,7 @@
                 L.geoJSON(data, {
                     onEachFeature: function (feature, layer) {
                         if (feature.properties && feature.properties.bild) {
-                          layer.bindPopup('<img src="media/' + feature.properties.bild + '" alt="Bild" style="width:100%;">');
+                          layer.bindPopup('<a href="media/' + feature.properties.bild + '" target="_blank"><img src="media/' + feature.properties.bild + '" alt="Bild" style="width:100%;"></a>');
                         }
                     }
                 }).addTo(map);
